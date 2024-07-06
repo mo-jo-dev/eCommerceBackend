@@ -4,13 +4,13 @@
 1. Clone the project
 
 ```
-git clone https://github.com/singhsanket143/ShopCart-Ecommerce-Backend.git
+git clone https://github.com/mo-jo-dev/eCommerceBackend.git
 ```
 
 2. Move into the directory of the downloaded project
 
 ```
-cd ShopCart-Ecommerce-Backend
+cd eCommerceBackend
 ```
 
 3. Install node_modules
