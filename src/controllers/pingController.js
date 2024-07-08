@@ -1,17 +1,29 @@
 
 
-const ping = (req, res) => {
+const pingV1 = (req, res) => {
     try {
         return res.json({
-            message: 'everything fine!!'
+            message: 'everything fine with Version 1!!'
         })
     } catch (error) {
         return res.json({
-            message: 'error!!'
+            message: 'error in Version 1!!'
+        })
+    }
+}
+
+const pingV2 = (req, res) => {
+    try {
+        return res.json({
+            message: 'everything fine with Version 2!!'
+        })
+    } catch (error) {
+        return res.json({
+            message: 'error in Version 2!!'
         })
     }
 }
 
 module.exports = {
-    ping
+    pingV1, pingV2
 }
