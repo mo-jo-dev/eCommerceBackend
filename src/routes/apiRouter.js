@@ -1,10 +1,10 @@
 const express = require('express');
 const apiRouter = express.Router()
 
-const pingRoutesV1 = require('./v1/pingRoutes');
-const pingRoutesV2 = require('./v2/pingRoutes');
+const v1Router = require('./v1/index');
+const v2Router = require('./v2/index');
 
-apiRouter.use('/v1', pingRoutesV1);
-apiRouter.use('/v2', pingRoutesV2);
+apiRouter.use('/v1', v1Router);
+apiRouter.use('/v2', v2Router);
 
 module.exports = apiRouter;
