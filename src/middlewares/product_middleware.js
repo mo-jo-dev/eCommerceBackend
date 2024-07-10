@@ -1,8 +1,9 @@
+const badRequest = require('../errors/bad_request_error')
 const { errorResponse } = require('../utils/error_response')
 
 function createValidator(req, res, next){
     if(!req.body.title){
-        return res.status(400).json(errorResponse('Validation Error!! Missing Title in the incoming request!!', { message: 'Body received without Title' }))
+        return res.status(400).json(errorResponse('Validation Error!! Missing Title in the incoming request!!', new badRequest("some_message")))
     }
 
     if(!req.body.description){
