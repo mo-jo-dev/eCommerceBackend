@@ -11,9 +11,10 @@ app.use(responseTime(function(req, res, time){
     res.setHeader('X-Response-Time', time);
 }));
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(bodyParser.text());
-app.use(bodyParser.urlencoded({extended: true}));
+
 app.use('/api', apiRoutes);
 
 app.listen(PORT, () => {

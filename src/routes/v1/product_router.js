@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const { productV1 } = require('../../controllers/ping_controller');
+const { create } = require('../../controllers/product_controller');
+const { createValidator } = require('../../middlewares/product_middleware');
 
-router.get('/', productV1);
+router.get('/', (req, res) => {
+    return res.json({products: []});
+});
+
+router.post('/', createValidator, create);
 
 module.exports = router;
